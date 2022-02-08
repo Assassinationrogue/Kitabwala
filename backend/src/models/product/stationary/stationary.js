@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
 const Schema = mongoose.Schema;
 
 const books = new Schema({
@@ -10,65 +9,65 @@ const books = new Schema({
     writer: { type: String, required: true },
     edition: { type: String, required: true },
     type: { type: String, required: true },
-    rating: { type: Number, required: false, default: 0 },
-    inStock: { type: boolean, required: true },
-    quantity: { type: Number, required: true, default: 0 },
+    rating: { type: Number, required: false},
+    inStock: { type: Boolean, required: true },
+    quantity: { type: Number, required: true},
     pages: { type: String, required: true },
     currency: { type: String, required: true },
-    language: { type: String, required: true, default: "English" },
-    publisher: { type: String, required: true },
+    language: { type: String, required: true},
     publicationDate: { type: Date, required: true },
     countryOfOrigin: { type: String, required: true },
-    isbn_10: { type: String, required: true },
-    isbn_13: { type: String, required: true },
+    isbn10: { type: String, required: true, unique: true, index: { unique: true }},
+    isbn13: { type: String, required: true, unique: true },
     weight: { type: Number, required: true },
     unit: { type: String, required: true },
     imageUrl: { type: String, required: true },
     description: { type: String, required: false },
 });
 
-const pencil = new Schema({
+const others = new Schema({ // pen, colors and pencil
+    title: { type: String, required: true, unique: true },
+    subtitle: { type: String, required: false },
+    price: { type: Number, required: true },
+    currency: { type: String, required: true },
+    rating: { type: Number, required: false},
+    weight: { type: Number, required: true },
+    inStock: { type: Boolean, required: true },
+    countryOfOrigin: { type: String, required: true },
+    unit: { type: String, required: true },
+    imageUrl: { type: String, required: true },
+    description: { type: String, required: false },
+    setType: { type: String, required: false },
+    setQuantity: { type: Number, required: false },
+    brand: { type: String, required: true },
+    material: { type: String, required: true },
+    color: { type: String, required: false },
 
 });
 
 
-const pen = new Schema({
-
-});
-
-const waterColor = new Schema({
-
-});
-
-const oilColor = new Schema({
-
-});
-
-const paintBrush = new Schema({
-
-});
-
-const notePads = new Schema({
-
-});
-
-const paintBrush = new Schema({
-
-});
-
-const geomatryItems = new Schema({
-
-});
-
-const sharpner = new Schema({
-
+const noteBooks = new Schema({
+    title: { type: String, required: true, unique: true },
+    subtitle: { type: String, required: false },
+    price: { type: Number, required: true },
+    currency: { type: String, required: true },
+    rating: { type: Number, required: false },
+    weight: { type: Number, required: true },
+    inStock: { type: Boolean, required: true },
+    countryOfOrigin: { type: String, required: true },
+    unit: { type: String, required: true },
+    imageUrl: { type: String, required: true },
+    description: { type: String, required: false },
+    ruling: { type: String, required: true },
+    asin: { type: String, required: true },
 });
 
 
 const stationary = new Schema({
-    books: [books],
-    pencil: [pencil],
-
+    books: books,
+    others: others,
+    noteBooks: noteBooks,
+    category: {type: String, default: "stationary"}
 });
 
 module.exports = stationary;

@@ -7,6 +7,7 @@ const productsRoutes = require('./routes/products.route');
 const session = require("express-session");
 const config = require("./utils/config");
 const MongoDBStore = require("connect-mongodb-session")(session); // passing session
+const path = require('path');
 
 const expressApp = express();
 const store = new MongoDBStore({
@@ -14,6 +15,12 @@ const store = new MongoDBStore({
   collection: "sessions",
 });
 
+/**
+ * Path for static file like images/css
+ */
+const staticFiles = express.static(path.join(__dirname, 'public'))
+
+expressApp.use(staticFiles);
 expressApp.use(bodyParser.urlencoded({ extended: false }));
 expressApp.use(bodyParser.json());
 expressApp.use(

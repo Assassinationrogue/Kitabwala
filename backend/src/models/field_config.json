@@ -1,0 +1,36 @@
+{
+    "signupForm": {
+        "fullName":{
+            "field":"fullName",
+            "label":"Full Name",
+            "readonly":false,
+            "required":true
+        },
+        "emailAddress": {
+            "field": "emailAddress",
+            "label": "Email address",
+            "readonly": false,
+            "required": true
+        },
+        "password": {
+            "field": "password",
+            "label": "Password",
+            "readonly": false,
+            "required": true
+        }
+    },
+    "loginForm": {
+        "emailAddress": {
+            "field": "emailAddress",
+            "label": "Email address",
+            "readonly": false,
+            "required": true
+        },
+        "password": {
+            "field": "password",
+            "label": "Password",
+            "readonly": false,
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,133 @@
+{
+    "stationary": {
+        "books": {
+            "letUsC": {
+                "title": "Let us C",
+                "subtitle": "",
+                "publisher": "BPB Pulications",
+                "price": 270,
+                "writer": "Yashavant Kanetkar",
+                "edition": "17th Edition",
+                "type": "Paperback",
+                "rating": 0,
+                "inStock": true,
+                "quantity": 255,
+                "pages": 646,
+                "currency": "₹",
+                "language": "English",
+                "publicatonDate": "01 January 2017",
+                "countryOfOrigin": "India",
+                "isbn-10": "9789387284494",
+                "isbn-13": "978-9387284494",
+                "weight": 399,
+                "unit": "g",
+                "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/41wAAnUGmhL.jpg"
+            },
+            "anxiousPeople": {
+                "title": "Anxious People",
+                "subtitle": "The No. 1 New York Times bestseller, now a Netflix TV Series",
+                "publisher": "Penguin (10 October 2021)",
+                "price": 416,
+                "writer": "Fradrick Backman",
+                "edition": null,
+                "type": "Paperback",
+                "rating": 0,
+                "inStock": true,
+                "quantity": 128,
+                "pages": 416,
+                "currency": "₹",
+                "language": "English",
+                "publicatonDate": "10 October 2021",
+                "countryOfOrigin": "United Kingdom",
+                "isbn-10": "140593025X",
+                "isbn-13": "978-1405930253",
+                "weight": 287,
+                "unit": "g",
+                "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/810XLL7gvRL.jpg"
+            }
+        },
+        "pencil": {
+            "steadlerMarsLumograph": {
+                "title": "Staedtler Mars Lumograph",
+                "subtitle": "Drawing Pencil for Design and Drafting",
+                "packOf": 12,
+                "price": 1150,
+                "currency": "₹",
+                "manufacturer": "Staedtler",
+                "brand": "Steadler",
+                "material": "Wood",
+                "counteryOfOringin": "Germany",
+                "weight": 145,
+                "unit": "g",
+                "rating": 0,
+                "imageUrl": "https://m.media-amazon.com/images/I/31WMVrZ8h3L.jpg"
+            },
+            "derwentGraphicSoftGrephitePencils": {
+                "title": "Derwent Graphic Soft",
+                "subtitle": "Graphite Pencils, 9B-H",
+                "packOf": 12,
+                "price": 1299,
+                "currency": "₹",
+                "manufacturer": "Acco Brands LLC",
+                "brand": "Derwent",
+                "material": "Graphite",
+                "counteryOfOringin": "United Kingdom",
+                "weight": 161,
+                "unit": "g",
+                "rating": 0,
+                "imageUrl": "https://m.media-amazon.com/images/I/913SLyR8DRL._SL1500_.jpg"
+            }
+        }
+    },
+    "accessories": {
+        "mobiles": {
+            "OnePlusNord2_5G": {
+                "title": "One Plus Nord 2 5G",
+                "color": "Blue Haze",
+                "asin": "B097RD2JX8",
+                "price": "29999",
+                "currency": "₹",
+                "manufacturer": "Oppo Mobiles India Private Limited",
+                "countryOfOrigin": "India",
+                "weight": 190,
+                "unit": "g",
+                "itemModelNumber": "NORD2",
+                "specification": {
+                    "os": "Android 11.3 OxygenOS",
+                    "ram": 8,
+                    "ramUnit": "GB",
+                    "batteries": "Lithium Battery",
+                    "batteryPowerRating": 4500,
+                    "camera": {
+                        "rearCameraLensOne": "50 MP",
+                        "rearCameraLensTwo": "Triple Rear Camera (50 MP + 8 MP + 2 MP) | 32 MP Front Camera"
+                    },
+                    "screen": {
+                        "size": 6.43,
+                        "unit": "inches",
+                        "type": "AMOLED"
+                    },
+                    "storage": {
+                        "inbuilt": 128,
+                        "expandable": 128,
+                        "size": {
+                            "inbuilt": "GB",
+                            "expandable": "GB"
+                        }
+                    },
+                    "processor": "MediaTek Dimensity 1200-AI",
+                    "warranty": "1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase",
+                    "description":{
+                        "1":"Camera: Sony IMX 766 50MP+8MP+2MP AI Triple Camera with 4K@30FPS|1080p video at 30/60 fps | 32MP Front camera with 1080p video at 30/60 fps | Super Slow Motion: 1080p video at 120 fps, 720p video at 240 fps | Time-Lapse: 1080p 120fps;720p 240fps",
+                        "2":"Chipset: MediaTek Dimensity 1200-AI - The octa-core Dimensity 1200-AI features one of the fastest smartphone CPUs ever: the 3GHz Arm Cortex-A78 provides the most immediate response, with up to 22% faster CPU performance while also being 25% more power-efficient versus the previous generation",
+                        "3":"Display: 6.43-inch, 90Hz Fluid AMOLED display | Resolution: 2400 x 1080 pixels | 410 PPI | Aspect Ratio: 20:9 | Support sRGB, Display P3",
+                        "4":"Memory, Storage & SIM: 8GB RAM | 128GB internal memory on UFS 3.1 storage system.",
+                        "5":"Connectivity: Dual SIM (nano + nano) | Currently supports dual 5G SIM Cards",
+                        "6":"Operating System: OxygenOS 11.3 operating system based on Android 11"   
+                    }
+
+                }
+            }
+        }
+    }
+}

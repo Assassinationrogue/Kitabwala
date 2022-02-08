@@ -1,12 +1,7 @@
-const Router = require('express').Router();
-const trelloDb = require("../utils/database");
+const Router = require("express").Router();
+const productsController = require('../controllers/products');
 
-
-Router.post("/",(req,res,next)=>{
-    
-    res.statusCode = 200;
-    res.send("Sending product's list soon");
-    console.log(req.body?.category)
-})
+Router.post("/", productsController.getProducts);
+Router.post("/isbn", productsController.getBookByName);
 
 module.exports = Router;

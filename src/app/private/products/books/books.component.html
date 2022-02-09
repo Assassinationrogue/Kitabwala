@@ -1,0 +1,41 @@
+<h4 class="ui header">Books</h4>
+<div class="ui grid" *ngIf="bookList.length; else loading">
+  <div class="four wide column" *ngFor="let book of bookList">
+    <div class="ui card">
+      <div class="image">
+        <img [src]="books[book]?.imageUrl" alt="" class="img-rzg"/>
+      </div>
+      <div class="content">
+        <a class="header" (click)="showBook(books[book]?.title,book, books[book]?.isbn10)">{{ books[book]?.title }}</a>
+        <div class="meta">By {{ books[book]?.writer }}</div>
+      </div>
+      <div class="content">
+        <div class="right floated">Ratings {{ books[book]?.rating }}</div>
+        <div class="sub header">
+          {{ books[book]?.currency }} {{ books[book]?.price }}
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="two buttons">
+          <button
+            class="ui button basic blue"
+            [disabled]="!books[book]?.inStock"
+          >
+            Add to cart
+          </button>
+          <button
+            class="ui button basic green"
+            [disabled]="!books[book]?.inStock"
+            (click)="redirectToCheckoutPage()"
+          >
+            Buy now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div id="preloader"></div>
+</ng-template>

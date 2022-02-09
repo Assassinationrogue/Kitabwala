@@ -1,0 +1,49 @@
+<div class="ui one column stackable center aligned page grid">
+  <div class="column twelve wide">
+    <div class="margin__20-px--top">
+      <div class="ui segment">
+        <h2 class="ui center aligned icon header">
+          <i class="circular user icon"></i>
+          Login
+        </h2>
+        <form
+          class="ui form"
+          [formGroup]="fg"
+          *ngIf="fg"
+          (ngSubmit)="onSubmit()"
+        >
+          <div class="field">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              pInputText
+              id="email"
+              placeholder="xyz123@xyz.com"
+              formControlName="emailAddress"
+            />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              pInputText
+              id="password"
+              placeholder="**************"
+              formControlName="password"
+            />
+          </div>
+          <button
+            pButton
+            type="submit"
+            label="Login"
+            class="ui button primary"
+          ></button>
+          <div class="ui horizontal divider">Or</div>
+          <a [routerLink]="['/signup']" style="display: block; margin: 20px 0px"
+            >Get an account</a
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

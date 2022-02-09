@@ -1,0 +1,28 @@
+.form {
+  &__size {
+    width: 51%;
+    height: 330px;
+  }
+  &__position {
+    position: absolute;
+    top: 14%;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .form__size {
+    width: 76%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .form__size {
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .form__size {
+    width: 65%;
+  }
+}

@@ -1,0 +1,121 @@
+<div class="ui inverted menu">
+  <a [routerLink]="['/welcome']" class="item"><i class="home icon"></i>Home</a>
+  <a [routerLink]="['/welcome/products']" class="item"
+    ><i class="boxes icon"></i>Products</a
+  >
+  <div class="right menu">
+    <a [routerLink]="['/welcome/cart']" class="ui item"><i class="shopping cart icon"></i>Cart</a>
+    <a [routerLink]="['/']" class="ui item" (click)="utility.userLogout()"
+      >Logout</a
+    >
+  </div>
+</div>
+
+<div class="product__display">
+  <div class="product__display-column--1">
+    <div class="product__display-body">
+      <div class="product__display-body--row---1">
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/I/41wAAnUGmhL.jpg"
+          alt=""
+        />
+      </div>
+      <div class="product__display-body--row---2">
+        <div class="product__display-header">
+          <span
+            ><h1 class="ui header">Let us C</h1>
+            <h2 class="product__display-subheader">
+              <span>Authentic Guide To C Programming Language</span>
+            </h2>
+            <h2 class="product__display-subheader--edition">
+              17th Edition
+              <span class="product__display-subheader--edition---type"
+                >Paperback</span
+              >
+              <span class="product__display-subheader--edition---date">
+                - 06 September 2020
+              </span>
+            </h2>
+          </span>
+        </div>
+        <p>by Yashvant Kanetkar</p>
+        <hr />
+        <div class="product__display-middle">
+          <div class="product__display-middle--rating---star">
+            <span class="star--color">
+              <i class="star icon"></i>
+              <i class="star icon"></i>
+              <i class="star icon"></i>
+              <i class="star icon"></i>
+              <i class="star half icon"></i>
+            </span>
+            <span style="color: black">
+              <a href="">12</a>
+              ratings
+            </span>
+          </div>
+          <h3 class="product__display-middle--price">Price: ₹ 270</h3>
+        </div>
+        <hr />
+        <div class="product__display-bottom">
+          <h4 class="ui header">Description</h4>
+          <ul>
+            <li>Language used in the book is English.</li>
+            <li>Book has detailed explaination on each and every topic.</li>
+            <li>Provides exercise to practice for every topic.</li>
+            <li>You can carry this book where ever you want, not too heavy.</li>
+            <li>Sold more than 30 millions copies.</li>
+            <li>Is available in E-Book too, if purchased paperback.</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="product__display-footer">
+          <div class="two buttons">
+            <button class="ui button primary right floated">Buy now</button>
+            <button class="ui positive button right floated">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product__display-column--2">
+    <hr />
+    <div class="product__display-details">
+      <h2 class="ui header">Product details</h2>
+      <div class="product__display-details--list">
+        <ul class="detail">
+          <li class="detail-key">
+            <i class="leanpub icon"></i> Publisher
+            <span class="detail-value">: BPB Publications ; Seventeenth edition (4 September 2020); </span>
+          </li>
+          <li class="detail-key">
+            <i class="language icon"></i>Language
+            <span class="detail-value">: English</span>
+          </li>
+          <li class="detail-key">
+            <i class="book icon"></i>Paperback
+            <span class="detail-value">: 486 pages</span>
+          </li>
+          <li class="detail-key">
+            <i class="barcode icon"></i>ISBN-10
+            <span class="detail-value">: 9389845688</span>
+          </li>
+          <li class="detail-key">
+            <i class="barcode icon"></i>ISBN-13
+            <span class="detail-value">: 978-9389845686</span>
+          </li>
+          <li class="detail-key">
+            <i class="balance scale icon"></i>Item Weight
+            <span class="detail-value">: 560 g</span>
+          </li>
+          <li class="detail-key">
+            <i class="map marker alternate icon"></i>Country of Orgin
+            <span class="detail-value">: India</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <div class="product__display-comments"></div>
+  </div>
+</div>

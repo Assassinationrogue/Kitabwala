@@ -1,0 +1,17 @@
+<div class="ui inverted menu">
+  <a [routerLink]="['/welcome']" class="active item"
+    ><i class="home icon"></i>Home</a
+  >
+  <a [routerLink]="['products']" class="item"
+    ><i class="boxes icon"></i>Products</a
+  >
+  <div class="right menu">
+    <a [routerLink]="['/welcome/cart']" class="ui item"
+      ><i class="shopping cart icon"></i>Cart</a
+    >
+    <a [routerLink]="['/']" class="ui item" (click)="utility.userLogout()"
+      >Logout</a
+    >
+  </div>
+</div>
+<div class="ui segment"></div>

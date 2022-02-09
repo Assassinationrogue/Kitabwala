@@ -1,0 +1,62 @@
+<div class="ui inverted menu">
+  <a [routerLink]="['/welcome']" class="item"><i class="home icon"></i>Home</a>
+  <a [routerLink]="['/welcome/products']" class="item"
+    ><i class="boxes icon"></i>Products</a
+  >
+  <div class="right menu">
+    <a [routerLink]="['/welcome/cart']" class="ui item active"
+      ><i class="shopping cart icon"></i>Cart</a
+    >
+    <a [routerLink]="['/']" class="ui item" (click)="utility.userLogout()"
+      >Logout</a
+    >
+  </div>
+</div>
+<div class="top__section">
+  <div class="top__section-heading">
+    <h1 class="top__section-heading--name">Shopping cart</h1>
+    <p class="top__section-heading--qty">{{ totalQuantity }} items in cart</p>
+  </div>
+
+  <div class="top__section-heading">
+    <h2 class="top__section-heading--tPrice">Total price</h2>
+    <p class="top__section-heading--tAmt">₹ {{ totalPrice }}</p>
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="cart__item-layout" *ngFor="let item of items; let i = index">
+    <div class="cart__item-image">
+      <img [src]="item.imageUrl" alt="" style="width: 120px; height: 150px" />
+    </div>
+    <div class="cart__item-details">
+      <h4 class="ui header">{{ item.title }}</h4>
+      <p class="ui sub-header">by {{ item.author }}</p>
+      <p>
+        <b>{{ item.type }}</b>
+      </p>
+      <p class="cart__item-details--instk"><b>In stock</b></p>
+    </div>
+    <div class="cart__item-actions">
+      <ul class="cart__item-actions--links">
+        <li class="cart__item-actions--links---item">
+          <span class="qty-text">Quantity:</span
+          ><input
+            type="number"
+            name="qty"
+            id="qty"
+            [value]="item.quantity"
+            (change)="showUpdatedItems($event, i)"
+          />
+        </li>
+        <li class="cart__item-actions--links---item"><a href="">Delete</a></li>
+        <li class="cart__item-actions--links---item">
+          <a href="">Save for later</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cart__item-price">
+      <h1>₹ {{ item.totalPrice }}</h1>
+    </div>
+  </div>
+</div>

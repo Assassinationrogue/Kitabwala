@@ -58,9 +58,15 @@ exports.getProducts = (req, res, next) => {
 };
 
 exports.getBookByName = (req,res,next)=>{
-    console.log(req.body.isbn)
+  let isbn = req.body.isbn;
+  let bookName = req.body.bookName;
+  let searchKey = `books.${bookName}.isbn10`;
+  console.log(searchKey)
+    console.log(req.body)
     res.send({isbn: req.body.isbn})
-    productsModel.find({}).$where('books.req.body.isbn')
+    productsModel.find({searchKey:bookName.isbn},(err,doc)=>{
+      console.log(doc)
+    })
 }
 
 exports.getOthersById = (req, res, next) => {

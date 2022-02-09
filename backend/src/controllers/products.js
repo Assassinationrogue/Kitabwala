@@ -57,18 +57,32 @@ exports.getProducts = (req, res, next) => {
     });
 };
 
-exports.getBookByName = (req,res,next)=>{
-  let isbn = req.body.isbn;
-  let bookName = req.body.bookName;
-  let searchKey = `books.${bookName}.isbn10`;
-  console.log(searchKey)
-    console.log(req.body)
-    res.send({isbn: req.body.isbn})
-    productsModel.find({searchKey:bookName.isbn},(err,doc)=>{
-      console.log(doc)
+/**
+ * Gets book details by book name
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
+exports.getBookByName = (req, res, next) => {
+  const bookName = req.body.bookName;
+  const bookFilter = { books: {}, _id: 0 };
+  bookFilter.books[bookName] = 1;
+  productsModel
+    .find({}, bookFilter)
+    .then((book) => {
+      res.send({
+        status: "Success",
+        statusCode: 200,
+        message: `Data successfully retrieved!`,
+        data: book[0]["_doc"]["books"]["_doc"][bookName],
+      });
     })
-}
-
-exports.getOthersById = (req, res, next) => {
-    productsModel.findOne();
-}
+    .catch((err) => {
+      res.send({
+        status: "Success",
+        statusCode: 404,
+        message: `Data not found ${err}.`,
+        data: [],
+      });
+    });
+};

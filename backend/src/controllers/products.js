@@ -60,7 +60,7 @@ exports.getProducts = (req, res, next) => {
 exports.getBookByName = (req,res,next)=>{
     console.log(req.body.isbn)
     res.send({isbn: req.body.isbn})
-    // productsModel.aggregate({$unwind: '$books'},())
+    productsModel.find({}).$where('books.req.body.isbn')
 }
 
 exports.getOthersById = (req, res, next) => {

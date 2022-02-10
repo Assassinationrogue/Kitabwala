@@ -1,0 +1,13 @@
+[
+    {
+        "_id":"post",
+        "owerner":"saumyadip biswas",
+        "title":"My problem with js",
+        "text":"Cannot figure out currying function",
+        "tags": "like",
+        "comments":[
+            
+        ]
+
+    }
+]

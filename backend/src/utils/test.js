@@ -168,8 +168,13 @@ class ShootingGame {
 let shootingGame = new ShootingGame();
 shootingGame.numberOfGames = 13;
 
-if(false){
-    return 1;
-}else{
-    continue
-}
+let i = 0;
+
+
+
+for(;i<=3;i++){  // 0 -> 1 // 1 -> 2 // 2 -> 3 // 3-> 4
+    console.log(++i); // 1 -> 2 // 2 -> 3// 3 -> 4
+    i--; // 1 // 2 // 3 
+} 
+
+// 1 // 2 //  3 // 4

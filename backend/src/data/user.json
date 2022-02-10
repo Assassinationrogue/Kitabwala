@@ -1,0 +1,25 @@
+[
+    {   
+        "_id": "sbni15514awd123",
+        "userName":"nightblitzz",
+        "email":"saumyadip11@gmail.com",
+        "password": "mypallyisno1",
+        "details":{
+            "fullName":"Saumyadip Biswas",
+            "dateOfBirth":"03/12/1994",
+            "deliveryAddress":{
+                "street1":"Nagendranagar, 4th lane",
+                "street2":"Krishnanagar",
+                "pincode":743122
+            },
+            "comments":[
+                {
+                    "_id":"11874"
+                }
+            ],
+            "post":{
+                "_id":"post"
+            }
+        }
+    }
+]

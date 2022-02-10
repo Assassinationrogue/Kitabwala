@@ -1,0 +1,22 @@
+[
+    {
+        "_id": "11874",
+        "owner": "Saumyadip biswas",
+        "value": "I can't understand javascript",
+        "timeStamp": "01/01/2022",
+        "likes": 8,
+        "reply": [
+            {
+                "_id": "11875"
+            }
+        ]
+    },
+    {
+        "_id": "11875",
+        "owner": "Annonymous",
+        "value": "Then buy Max's javascript course!",
+        "timeStamp": "01/01/2022",
+        "likes": 8,
+        "reply": []
+    }
+]

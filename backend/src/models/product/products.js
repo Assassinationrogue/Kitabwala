@@ -8,4 +8,5 @@ const stationaryModel = require('./stationary/stationary');
 //     stationary:[stationaryModel]
 // })
 
+
 module.exports = mongoose.model('Stationary', stationaryModel, 'products');

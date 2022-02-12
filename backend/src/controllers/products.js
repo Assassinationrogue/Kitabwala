@@ -1,4 +1,7 @@
 const productsModel = require("../models/product/products");
+// const userModel = require('../models/user');
+
+
 
 /**
  * Fetches all the products from database
@@ -59,9 +62,9 @@ exports.getProducts = (req, res, next) => {
 
 /**
  * Gets book details by book name
- * @param {*} req 
- * @param {*} res 
- * @param {*} next 
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
  */
 exports.getBookByName = (req, res, next) => {
   const bookName = req.body.bookName;
@@ -86,3 +89,7 @@ exports.getBookByName = (req, res, next) => {
       });
     });
 };
+
+// exports.updateCartByUser = (req, res, next) => {
+  
+// };

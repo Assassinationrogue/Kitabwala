@@ -3,8 +3,6 @@ const productsController = require('../controllers/products');
 
 Router.post("/", productsController.getProducts);
 Router.post("/isbn", productsController.getBookByName);
-Router.post("/cart", (req, res, next) => {
-  res.send({_id:req.body._id});
-});
+Router.post("/cart", productsController.updateCartByUser);
 
 module.exports = Router;

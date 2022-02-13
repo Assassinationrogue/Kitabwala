@@ -6,7 +6,7 @@ const types = Schema.Types;
 const userComment = new Schema({
   _id: { type: types.ObjectId, auto: true },
   text: { type: types.String, required: true },
-  postedOn: { type: new Date(), auto: true },
+  postedOn: { type: Date.now, auto: true },
   postedBy: { type: types.ObjectId },
 });
 

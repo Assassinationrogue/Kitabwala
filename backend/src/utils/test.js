@@ -174,4 +174,3 @@ const func = () =>{
     }
 }
 
-console.log(typeof func())

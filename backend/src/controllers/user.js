@@ -12,7 +12,7 @@ exports.postUserInfo = (req, res, next) => {
   let loadedUser;
   Registeration.findOne(
     { emailAddress: req.body.emailAddress?.toLowerCase() },
-    { details: 0 },
+    { details: 0, cart: 0 },
     async (err, doc) => {
       console.log(doc);
 
@@ -27,19 +27,18 @@ exports.postUserInfo = (req, res, next) => {
             req.session.user = loadedUser;
             // res.cookie('email', `${loadedUser.emailAddress}`, { httpOnly: true });
             req.session.cookie.httpOnly = true;
+            req.user = doc;
             res.send({
               status: "success",
               statusCode: 200,
               message: `Welcome ${doc.fullName}`,
             });
           } else {
-            res
-              .status(401)
-              .send({
-                status: "Failed",
-                statusCode: 401,
-                message: "Wrong password.",
-              });
+            res.status(401).send({
+              status: "Failed",
+              statusCode: 401,
+              message: "Wrong password.",
+            });
           }
         } else {
           res.status(208).send({
@@ -56,7 +55,7 @@ exports.postUserInfo = (req, res, next) => {
 };
 exports.getUserInfo = (req, res, next) => {
   const userName = req.dataProcessed;
-  console.log(userName);
+  //console.log(userName);
 };
 
 exports.postLogout = (req, res, next) => {

@@ -1,7 +1,5 @@
 const productsModel = require("../models/product/products");
-// const userModel = require('../models/user');
-
-
+const userModel = require("../models/user");
 
 /**
  * Fetches all the products from database
@@ -18,6 +16,7 @@ exports.getProducts = (req, res, next) => {
   let allIdRemoved = { books: {}, others: {} };
   productsModel
     .find()
+    // .select('title price rating inStock currency imageUrl')
     .then((products) => {
       /**
        * Assigns list of products
@@ -90,6 +89,32 @@ exports.getBookByName = (req, res, next) => {
     });
 };
 
-// exports.updateCartByUser = (req, res, next) => {
-  
-// };
+exports.updateCartByUser = (req, res, next) => {
+  userModel
+    .findOne({ emailAddress: req.body.userEmail }, { cart: 1 })
+    .then(async (user) => {
+      if (!user._doc.cart.items.length) {
+        user._doc.cart.items.push({ productId: req.body._id, quantity: 1 });
+      } else {
+        const productIndex = user._doc.cart.items.findIndex(cartProduct=>{
+          return cartProduct.productId.toString() === req.body._id.toString();
+        });
+        if(productIndex>=0){
+          user._doc.cart.items[productIndex].quantity++;
+        }else{
+          user._doc.cart.items.push({ productId: req.body._id, quantity: 1 });
+        }
+      }
+      user.save();
+      next();
+      res.send({ items: user });
+    })
+    .catch((err) => {
+      res.send({
+        status: "Success",
+        statusCode: 404,
+        message: `Data not found ${err}.`,
+        data: [],
+      });
+    });
+};
